@@ -1,15 +1,12 @@
+import "./App.css";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Admin from "./Pages/Admin";
+import CreateRecipe from "./Components/CreateRecipe/CreateRecipe";
+import CreateRecipes from "./Pages/CreateRecipes";
 
-import './App.css';
-import Home from './Pages/Home';
-import Login from './Pages/Login';
-import Admin from './Pages/Admin';
-import CreateRecipe from './Components/CreateRecipe/CreateRecipe'
-import CreateRecipes from './Pages/CreateRecipes';
-
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
-
-
   return (
     <Router>
       <Routes>
@@ -17,15 +14,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/createrecipes" element={<CreateRecipes />} />
-        
-        
-        
-
-
       </Routes>
-  </Router>
+    </Router>
   );
 }
-
 
 export default App;

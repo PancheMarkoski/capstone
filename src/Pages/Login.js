@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { TextField, Button, Grid, Typography, Paper } from '@mui/material';
-import {Link} from "react-router-dom"
+import React, { useState } from "react";
+import { TextField, Button, Grid, Typography, Paper } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +14,12 @@ const Login = () => {
   };
 
   return (
-    <Grid container justifyContent="center" alignItems="center" style={{ height: '100vh' }}>
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      style={{ height: "100vh" }}
+    >
       <Grid item xs={10} sm={6} md={4}>
         <Paper elevation={3} style={{ padding: 20 }}>
           <Typography variant="h5" align="center" gutterBottom>
@@ -39,7 +43,14 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Link to={"/admin"} type="submit" variant="contained" color="primary" fullWidth style={{ marginTop: 20 }}>
+            <Link
+              to={"/admin"}
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              style={{ marginTop: 20 }}
+            >
               Submit
             </Link>
           </form>

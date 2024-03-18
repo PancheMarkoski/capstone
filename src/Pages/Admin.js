@@ -1,16 +1,28 @@
-import React from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Container, Button, IconButton, Toolbar, AppBar } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
-import { Link } from 'react-router-dom';
-import AdminRecipes from '../Components/AdminRecipes/AdminRecipes';
+import React from "react";
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+  Container,
+  Button,
+  IconButton,
+  Toolbar,
+  AppBar,
+} from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { Link } from "react-router-dom";
+import AdminRecipes from "../Components/AdminRecipes/AdminRecipes";
 
 const drawerWidth = 240;
 
 const Admin = () => {
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: "flex" }}>
       <AppBar position="fixed" style={{ zIndex: 1201 }}>
         <Toolbar>
           <Typography variant="h6" noWrap>
@@ -26,22 +38,21 @@ const Admin = () => {
         <Toolbar />
         <div style={{ width: drawerWidth }}>
           <List>
-           
-              <Link  to={"/createrecipes"}>
-                <ListItem button>
-                  <ListItemIcon>
-                    <AddIcon />
-                  </ListItemIcon>
-                  <ListItemText sx={{color: "#000000DE"}} primary="Create Product" />
-                </ListItem>
-              </Link>
-             
-
-           
+            <Link to={"/createrecipes"}>
+              <ListItem button>
+                <ListItemIcon>
+                  <AddIcon />
+                </ListItemIcon>
+                <ListItemText
+                  sx={{ color: "#000000DE" }}
+                  primary="Create Product"
+                />
+              </ListItem>
+            </Link>
           </List>
         </div>
       </Drawer>
-      <main style={{ flexGrow: 1, padding: '24px' }}>
+      <main style={{ flexGrow: 1, padding: "24px" }}>
         <Toolbar />
         <Container>
           <Typography variant="h4" gutterBottom>
@@ -60,8 +71,6 @@ const Admin = () => {
               </ListItem>
             ))} */}
             <AdminRecipes />
-
-
           </List>
         </Container>
       </main>
